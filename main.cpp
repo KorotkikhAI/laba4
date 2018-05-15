@@ -75,7 +75,7 @@ int main()
     assert(nibble_to_hex(0xe) == 'e');
     assert(nibble_to_hex(0xf) == 'f');
     cin>>oper1>>oper2>>oper3;
-    switch (oper2);
+    switch (oper2)
     {
 case '&':
 
@@ -92,7 +92,7 @@ case '&':
         cout<<" = ";
         print_in_binary(&res,sizeof(res));
         break;
-   case '|';
+    case '|':
 
         res=oper1|oper3;
         print_in_hex(&oper1,sizeof(oper1));
@@ -108,7 +108,7 @@ case '&':
         print_in_binary(&res,sizeof(res));
         break;
 
-    case '^'
+    case '^':
 
         res=oper1^oper3;
         print_in_hex(&oper1,sizeof(oper1));
