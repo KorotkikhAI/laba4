@@ -151,5 +151,21 @@ case '&':
     cout<<"\t address of element: "<<"\t Size of element: "<<endl;
     for (int i=0; i<3;i++)
         cout<<i<<"\t"<<&students[i]<<"\t\t"<<sizeof(students[i])<<endl;
-
+    cout<<"FOR FIRST ELEM OF ARRAY: "<<endl;
+    cout<<"\t Addres of field: "<<"\t size of field: "<<"\toffset"<<endl;
+    cout<<"NAME:\t"<<&students[0].name<<"\t\t";
+    cout<<sizeof(students[0].name)<<"\t\t\t"<<offsetof(struct Student, name)<<endl;
+    cout<<"YEAR:\t"<<&students[0].year<<"\t\t";
+    cout<<sizeof(students[0].year)<<"\t\t\t"<<offsetof(struct Student, sred_ball)<<endl;
+    cout<<"SREDBALL:\t"<<&students[0].sred_ball<<"\t\t";
+    cout<<sizeof(students[0].sred_ball)<<"\t\t\t"<<offsetof(struct Student, sred_ball)
+            <<endl;
+    cout<<"SEX:\t"<<&students[0].sex<<"\t\t";
+    cout<<sizeof(students[0].sex)<<"\t\t\t"<<offsetof(struct Student, classes)<<endl;
+    cout<<"calsses:\t"<<&students[0].classes<<"\t\t";
+    cout<<sizeof(students[0].classes)<<"\t\t\t"<<offsetof(struct Student, classes)<<endl;
+    cout<<"Starosta:\t"<<&students[0].starosta<<"\t\t";
+    cout<<sizeof(students[0].starosta)<<"\t\t\t"<<offsetof(struct Student, starosta)
+            <<endl;
 }
+
