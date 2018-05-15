@@ -156,16 +156,26 @@ case '&':
     cout<<"NAME:\t"<<&students[0].name<<"\t\t";
     cout<<sizeof(students[0].name)<<"\t\t\t"<<offsetof(struct Student, name)<<endl;
     cout<<"YEAR:\t"<<&students[0].year<<"\t\t";
-    cout<<sizeof(students[0].year)<<"\t\t\t"<<offsetof(struct Student, sred_ball)<<endl;
+    cout<<sizeof(students[0].year)<<"\t\t\t"<<offsetof(struct Student, year)<<endl;
     cout<<"SREDBALL:\t"<<&students[0].sred_ball<<"\t\t";
     cout<<sizeof(students[0].sred_ball)<<"\t\t\t"<<offsetof(struct Student, sred_ball)
             <<endl;
-    cout<<"SEX:\t"<<&students[0].sex<<"\t\t";
-    cout<<sizeof(students[0].sex)<<"\t\t\t"<<offsetof(struct Student, classes)<<endl;
     cout<<"calsses:\t"<<&students[0].classes<<"\t\t";
     cout<<sizeof(students[0].classes)<<"\t\t\t"<<offsetof(struct Student, classes)<<endl;
     cout<<"Starosta:\t"<<&students[0].starosta<<"\t\t";
     cout<<sizeof(students[0].starosta)<<"\t\t\t"<<offsetof(struct Student, starosta)
             <<endl;
+    cout<<"Name: "<<endl;
+    cout<<"Binary"<<endl;
+    print_in_binary(&students[0].name,sizeof(students[0].name));
+    cout<<"\n Hex: \n";
+    print_in_hex(&students[0].name,sizeof(students[0].name));
+    cout<<endl;
+    cout<<"Name: "<<endl;
+    cout<<"Binary"<<endl;
+    print_in_binary(&students[0].year,sizeof(students[0].year));
+    cout<<"\n Hex: \n";
+    print_in_hex(&students[0].year,sizeof(students[0].year));
+    cout<<endl;
 }
 
