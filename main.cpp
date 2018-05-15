@@ -38,7 +38,9 @@ void print_in_binary(uint8_t byte) {
     for (uint8_t bit = 7; bit > 0; bit--) {
         cout << bit_digit(byte, bit);
     }
+    cout<<bit_digit(byte,0);
 }
+
 void
 print_in_binary(const void* data, size_t size) {
     const uint8_t* bytes = as_bytes(data);
@@ -54,7 +56,8 @@ print_in_binary(const void* data, size_t size) {
     }
 }
 int main()
-{
+{   uint16_t oper1,oper3,res;
+    char oper2;
     assert(nibble_to_hex(0x0) == '0');
     assert(nibble_to_hex(0x1) == '1');
     assert(nibble_to_hex(0x2) == '2');
@@ -71,11 +74,54 @@ int main()
     assert(nibble_to_hex(0xd) == 'd');
     assert(nibble_to_hex(0xe) == 'e');
     assert(nibble_to_hex(0xf) == 'f');
-    uint16_t u32 = 0x42;
-    cout << "u32 bytes: ";
-    print_in_hex(&u32, sizeof(u32));
-    cout << '\n';
-    uint8_t u8 =3;
-    print_in_binary(&u8, sizeof(u8));
-    cout << '\n';
+    cin>>oper1>>oper2>>oper3;
+    switch (oper2);
+    {
+case '&':
+
+        res=oper1&oper3;
+        print_in_hex(&oper1,sizeof(oper1));
+        cout<<oper2;
+        print_in_hex(&oper3,sizeof(oper3));
+        cout<<" = ";
+        print_in_hex(&res,sizeof(res));
+        cout<<'\n';
+        print_in_binary(&oper1,sizeof(oper1));
+        cout<<oper2<<" ";
+        print_in_binary(&oper2,sizeof(oper2));
+        cout<<" = ";
+        print_in_binary(&res,sizeof(res));
+        break;
+   case '|';
+
+        res=oper1|oper3;
+        print_in_hex(&oper1,sizeof(oper1));
+        cout<<oper2;
+        print_in_hex(&oper3,sizeof(oper3));
+        cout<<" = ";
+        print_in_hex(&res,sizeof(res));
+        cout<<'\n';
+        print_in_binary(&oper1,sizeof(oper1));
+        cout<<oper2<<" ";
+        print_in_binary(&oper2,sizeof(oper2));
+        cout<<" = ";
+        print_in_binary(&res,sizeof(res));
+        break;
+
+    case '^'
+
+        res=oper1^oper3;
+        print_in_hex(&oper1,sizeof(oper1));
+        cout<<oper2;
+        print_in_hex(&oper3,sizeof(oper3));
+        cout<<" = ";
+        print_in_hex(&res,sizeof(res));
+        cout<<'\n';
+        print_in_binary(&oper1,sizeof(oper1));
+        cout<<oper2<<" ";
+        print_in_binary(&oper2,sizeof(oper2));
+        cout<<" = ";
+        print_in_binary(&res,sizeof(res));
+        break;
+    }
 }
